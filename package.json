@@ -4,7 +4,7 @@
   "description": "Personal Website",
   "main": "index.js",
   "scripts": {
-    "build": "postcss --use autoprefixer -b 'last 10 versions' src/styles.css -o static/styles.css"
+    "build": "postcss --use autoprefixer --use cssnano -b 'last 10 versions' src/styles.css -o static/styles.css"
   },
   "repository": {
     "type": "git",
@@ -25,6 +25,9 @@
   "homepage": "https://github.com/guimochila/guimochila.github.io#readme",
   "devDependencies": {
     "autoprefixer": "^9.2.1",
-    "postcss": "^7.0.5"
+    "cssnano": "^4.1.5"
+  },
+  "dependencies": {
+    "postcss-cli": "^6.0.1"
   }
 }
