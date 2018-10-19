@@ -1,0 +1,26 @@
+{
+  "name": "guimochila.github.io",
+  "version": "1.0.0",
+  "description": "Personal Website",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/guimochila/guimochila.github.io.git"
+  },
+  "keywords": [
+    "Personal",
+    "Website",
+    "CSS",
+    "HTML",
+    "Javascript"
+  ],
+  "author": "Guilherme Scaldelai",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/guimochila/guimochila.github.io/issues"
+  },
+  "homepage": "https://github.com/guimochila/guimochila.github.io#readme"
+}
