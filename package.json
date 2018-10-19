@@ -4,7 +4,7 @@
   "description": "Personal Website",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "postcss --use autoprefixer -b 'last 10 versions' src/styles.css -o static/styles.css"
   },
   "repository": {
     "type": "git",
