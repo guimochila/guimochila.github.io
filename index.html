@@ -12,7 +12,7 @@
   <link rel="apple-touch-icon" sizes="180x180" href="/static/favicon/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/static/favicon/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/static/favicon/favicon-16x16.png">
-  <link rel="manifest" href="/static/favicon/site.webmanifest">
+  <link rel="manifest" href="/manifest.json">
   <link rel="mask-icon" href="/static/favicon/safari-pinned-tab.svg" color="#5bbad5">
   <link rel="shortcut icon" href="/static/favicon/favicon.ico">
   <meta name="msapplication-TileColor" content="#00aba9">
@@ -23,16 +23,14 @@
     crossorigin="anonymous">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:300,400,900">
   <link href="/static/styles.css" rel="stylesheet" type="text/css">
-  <link rel="prefetch" href="/projects/" as="document">
 </head>
 
 <body>
   <nav class="main-nav">
-    <a href="https://github.com/guimochila" target="_blank" rel="noreferrer">GitHub</a>
     <a href="https://twitter.com/guiscaldelai" target="_blank" rel="noreferrer">Twitter</a>
     <a href="https://www.facebook.com/guilherme.scaldelai" target="_blank" rel="noreferrer">Facebook</a>
     <a href="https://www.linkedin.com/in/guilhermescaldelai/" target="_blank" rel="noreferrer">LinkedIn</a>
-    <a href="/projects" class="cta">Projects</a>
+    <a href="https://github.com/guimochila" target="_blank" rel="noreferrer" class="cta">GitHub</a>
   </nav>
 
   <section class="section-profile">
@@ -135,6 +133,13 @@
     gtag('js', new Date());
 
     gtag('config', 'UA-125393370-1');
+  </script>
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('/sw.js');
+      });
+    }
   </script>
 
 </body>
