@@ -1,0 +1,38 @@
+{
+  "name": "Guilherme Scaldelai",
+  "short_name": "Gui PWA",
+  "lang": "en-UK",
+  "description": "My Personal website converted to a PWA.",
+  "theme_color": "#e8c81f",
+  "background_color": "#666",
+  "display": "standalone",
+  "scope": ".",
+  "start_url": "/index.html",
+  "icons": [
+    {
+      "src": "/static/favicon/favicon-48x48.png",
+      "type": "image/png",
+      "sizes": "48x48"
+    },
+    {
+      "src": "/static/favicon/favicon-128x128.png",
+      "type": "image/png",
+      "sizes": "128x128"
+    },
+    {
+      "src": "/static/favicon/favicon-192x192.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "/static/favicon/favicon-196x196.png",
+      "type": "image/png",
+      "sizes": "196x196"
+    },
+    {
+      "src": "/static/favicon/favicon-512x512.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ]
+}
