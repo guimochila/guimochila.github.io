@@ -4,8 +4,6 @@ const CACHE_DYNAMIC_VERSION = 'dynamic-v0.1';
 const STATIC_FILES = [
   '/',
   '/index.html',
-  '/projects',
-  '/projects/index.html',
   '/static/styles.css',
   '/static/img/avatar.jpeg',
   '/static/icons/sysadmin.svg',
