@@ -1,5 +1,5 @@
-const CACHE_STATIC_VERSION = 'static-v0.1';
-const CACHE_DYNAMIC_VERSION = 'dynamic-v0.1';
+const CACHE_STATIC_VERSION = 'static-v0.2';
+const CACHE_DYNAMIC_VERSION = 'dynamic-v0.2';
 
 const STATIC_FILES = [
   '/',
@@ -37,11 +37,16 @@ const cacheFallBackToNetwork = async req => {
     return cache;
   }
 
-  const response = await fetch(req);
-  const staticCache = await caches.open(CACHE_DYNAMIC_VERSION);
-  staticCache.put(req.url, response.clone());
-
-  return response;
+  try {
+    const response = await fetch(req);
+    if (response.ok) {
+      const staticCache = await caches.open(CACHE_DYNAMIC_VERSION);
+      staticCache.put(req.url, response.clone());
+    }
+    return response;
+  } catch (err) {
+    console.error('🛑 An error has hapenned: ', err);
+  }
 };
 
 self.addEventListener('install', event => {
@@ -53,7 +58,5 @@ self.addEventListener('activate', event => {
 });
 
 self.addEventListener('fetch', event => {
-  event.respondWith(
-    cacheFallBackToNetwork(event.request).catch(err => console.log(err)),
-  );
+  event.respondWith(cacheFallBackToNetwork(event.request));
 });
