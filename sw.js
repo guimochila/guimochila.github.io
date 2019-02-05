@@ -1,9 +1,8 @@
-const CACHE_STATIC_VERSION = 'static-v0.2';
-const CACHE_DYNAMIC_VERSION = 'dynamic-v0.2';
+const CACHE_STATIC_VERSION = 'static-v0.3';
+const CACHE_DYNAMIC_VERSION = 'dynamic-v0.3';
 
 const STATIC_FILES = [
   '/',
-  '/index.html',
   '/static/styles.css',
   '/static/img/avatar.jpeg',
   '/static/icons/sysadmin.svg',
@@ -11,6 +10,9 @@ const STATIC_FILES = [
   '/static/icons/javascript.svg',
   '/static/icons/project.svg',
   '/static/icons/chevron-thin-right.svg',
+  'static/favicon/favicon.ico',
+  '/static/favicon/favicon-16x16.png',
+  '/static/favicon/favicon-32x32.png',
   'https://use.fontawesome.com/releases/v5.3.1/css/all.css',
   'https://fonts.googleapis.com/css?family=Lato:300,400,90',
 ];
