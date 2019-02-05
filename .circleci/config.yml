@@ -55,8 +55,8 @@ workflows:
             branches:
               only: master
       - published-latest:
-        requires:
-          - build
-        filters:
-          branches:
-            only: master
+          requires:
+            - build
+          filters:
+            branches:
+              only: master
