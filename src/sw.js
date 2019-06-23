@@ -3,17 +3,6 @@ const CACHE_DYNAMIC_VERSION = 'dynamic-v0.3';
 
 const STATIC_FILES = [
   '/',
-  '/static/styles.css',
-  '/static/img/avatar.jpeg',
-  '/static/icons/sysadmin.svg',
-  '/static/icons/security.svg',
-  '/static/icons/javascript.svg',
-  '/static/icons/project.svg',
-  '/static/icons/chevron-thin-right.svg',
-  'static/favicon/favicon.ico',
-  '/static/favicon/favicon-16x16.png',
-  '/static/favicon/favicon-32x32.png',
-  'https://use.fontawesome.com/releases/v5.3.1/css/all.css',
   'https://fonts.googleapis.com/css?family=Lato:300,400,90',
 ];
 

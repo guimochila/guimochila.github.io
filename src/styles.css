@@ -90,6 +90,7 @@ h3 {
   display: flex;
   justify-content: center;
   flex-direction: column;
+  flex: none;
 }
 @media (max-width: 30em) {
   .footer__text {
