@@ -4,7 +4,9 @@
   "description": "Personal Website",
   "main": "index.js",
   "scripts": {
-    "build": "parcel build src/index.html",
+    "build:parcel": "parcel build src/index.html",
+    "copyRedirect": "cp src/_redirects dist/",
+    "build": "npm run build:parcel && npm run copyRedirect",
     "dev": "parcel src/index.html",
     "clean": "rimraf ./dist"
   },
