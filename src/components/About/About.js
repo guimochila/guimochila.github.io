@@ -1,12 +1,101 @@
 import React from 'react';
+import styled from '@emotion/styled';
 
 import imgSysadmin from '../../static/icons/sysadmin.svg';
 import imgSecurty from '../../static/icons/security.svg';
 import imgJavascript from '../../static/icons/javascript.svg';
 import imgProject from '../../static/icons/project.svg';
+import imgChevron from '../../static/icons/chevron-thin-right.svg';
+
+const AboutStyled = styled.section`
+  display: flex;
+  justify-content: center;
+
+  .list {
+    display: flex;
+    padding: 0 4rem 2rem;
+    justify-content: flex-start;
+    max-width: 66rem;
+    flex-wrap: wrap;
+  }
+  @media (max-width: 30em) {
+    .list {
+      padding: 0 2rem 2rem;
+    }
+  }
+  .list__item {
+    display: flex;
+    list-style: none;
+    flex-grow: 1;
+  }
+  @media (max-width: 30em) {
+    .list__item {
+      flex-wrap: wrap;
+      display: flex;
+    }
+  }
+  .list__details {
+    padding: 0 2.5rem 4rem;
+    flex-grow: 1;
+  }
+  .list__details__title {
+    margin-bottom: 2rem;
+    color: #333;
+    font-weight: 400;
+  }
+  @media (max-width: 30em) {
+    .list__details__title {
+      text-align: center;
+    }
+  }
+  .list__details__text {
+    line-height: 1.7;
+    max-width: 50rem;
+  }
+  .list__header > img {
+    height: 7rem;
+    width: 7rem;
+  }
+  @media (max-width: 30em) {
+    .list__header {
+      margin: 1rem auto;
+    }
+  }
+
+  .list__tech {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+  }
+  .list__tech__item {
+    flex: 0 0 50%;
+    margin-bottom: 0.7rem;
+  }
+  .list__tech__item::before {
+    content: '';
+    display: inline-block;
+    height: 1rem;
+    width: 1rem;
+    margin-right: 0.7rem;
+    background-image: url(${imgChevron});
+    background-size: cover;
+  }
+  @supports ((-webkit-mask-image: url()) or (mask-image: url())) {
+    .list__tech__item::before {
+      background-color: #f24976;
+      -webkit-mask-image: url(${imgChevron});
+      -webkit-mask-size: cover;
+      mask-image: url(${imgChevron});
+      mask-size: cover;
+      background-image: none;
+    }
+  }
+`;
 
 const About = () => (
-  <section className="section-about">
+  <AboutStyled>
     <ol className="list">
       <li className="list__item">
         <div className="list__header">
@@ -75,7 +164,7 @@ const About = () => (
         </div>
       </li>
     </ol>
-  </section>
+  </AboutStyled>
 );
 
 export default About;
