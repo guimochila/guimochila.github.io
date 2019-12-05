@@ -4,11 +4,10 @@
   "description": "Personal Website",
   "main": "index.js",
   "scripts": {
-    "build:parcel": "parcel build src/index.html",
-    "copyRedirect": "cp src/_redirects dist/",
-    "build": "npm run build:parcel && npm run copyRedirect",
-    "dev": "parcel src/index.html",
-    "clean": "rimraf ./dist"
+    "build": "next build",
+    "dev": "next -p 7777",
+    "clean": "rimraf ./dist",
+    "start": "next start"
   },
   "repository": {
     "type": "git",
@@ -28,15 +27,19 @@
   },
   "homepage": "https://github.com/guimochila/guimochila.github.io#readme",
   "devDependencies": {
-    "parcel-bundler": "^1.12.3"
+    "@types/node": "^12.12.14",
+    "@types/react": "^16.9.15",
+    "parcel-bundler": "^1.12.4",
+    "typescript": "^3.7.3"
   },
   "dependencies": {
-    "@emotion/core": "^10.0.10",
-    "@emotion/styled": "^10.0.12",
-    "react": "^16.8.6",
-    "react-dom": "^16.8.6",
-    "react-router-dom": "^5.0.1",
-    "rimraf": "^2.6.3"
+    "@emotion/core": "^10.0.22",
+    "@emotion/styled": "^10.0.23",
+    "next": "^9.1.4",
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0",
+    "react-router-dom": "^5.1.2",
+    "rimraf": "^2.7.1"
   },
   "browserslist": [
     "since 2017-06"
