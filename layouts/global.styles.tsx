@@ -1,7 +1,4 @@
-import React, { Fragment } from 'react';
-import { render } from 'react-dom';
-import App from './components/App';
-import { Global, css } from '@emotion/core';
+import { css } from '@emotion/core';
 
 const globalStyles = css`
   * {
@@ -57,17 +54,4 @@ const globalStyles = css`
   }
 `;
 
-const Root = () => (
-  <Fragment>
-    <Global styles={globalStyles} />
-    <App />
-  </Fragment>
-);
-
-render(<Root />, document.getElementById('root'));
-
-if ('serviceWorker' in navigator) {
-  window.addEventListener('load', () => {
-    navigator.serviceWorker.register('sw.js');
-  });
-}
+export default globalStyles;

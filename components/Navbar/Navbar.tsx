@@ -46,7 +46,7 @@ const NavBarStyled = styled.nav`
   }
 `;
 
-const Navbar = () => (
+const Navbar: React.FC = () => (
   <NavBarStyled>
     <a href="https://twitter.com/guiscaldelai" target="_blank" rel="noreferrer">
       Twitter

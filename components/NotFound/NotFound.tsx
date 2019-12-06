@@ -29,7 +29,7 @@ const NotFoundStyled = styled.div`
   }
 `;
 
-function NotFound({ location }) {
+const NotFound: React.FC = () => {
   return (
     <NotFoundStyled>
       <img
@@ -37,11 +37,11 @@ function NotFound({ location }) {
         alt="Not found."
       />
       <h1>
-        Oops! <code>{location.pathname}</code> not found! 😱
+        Oops! <code>Page</code> not found! 😱
       </h1>
       <p>Please check if the URL is correct.</p>
     </NotFoundStyled>
   );
-}
+};
 
 export default NotFound;

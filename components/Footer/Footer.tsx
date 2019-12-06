@@ -33,7 +33,7 @@ const FooterStyled = styled.footer`
   }
 `;
 
-const Footer = () => (
+const Footer: React.FC = () => (
   <FooterStyled>
     <div className="wrapper">
       <p className="text">&copy; Copyright 2018 Guilherme Scaldelai</p>

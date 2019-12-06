@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from '@emotion/styled';
 import { keyframes } from '@emotion/core';
-import avatar from '../../static/img/avatar.jpeg';
+import avatar from '../../public/static/img/avatar.jpeg';
 
 const heartBeats = keyframes`
   to {
@@ -77,13 +77,13 @@ const HeaderStyled = styled.section`
   }
 `;
 
-const Header = () => (
+const Header: React.FC = () => (
   <HeaderStyled>
     <header className="profile">
       <img src={avatar} className="profile__avatar" alt="My avatar picture" />
 
       <h1 className="profile__title">Guilherme Scaldelai</h1>
-      <h2 className="profile__subtitle">Software engineer enthusiast</h2>
+      <h2 className="profile__subtitle">Software engineer @ Tiendeo</h2>
       <h3 className="profile__text">
         In <i className="fas fa-heart profile__icon--heart" /> with
         <i className="fab fa-js profile__icon--js" />
