@@ -36,9 +36,7 @@ const NotFound: React.FC = () => {
         src="https://media.giphy.com/media/tvGOBZKNEX0ac/giphy.gif"
         alt="Not found."
       />
-      <h1>
-        Oops! <code>Page</code> not found! 😱
-      </h1>
+      <h1>Oops! Page not found! 😱</h1>
       <p>Please check if the URL is correct.</p>
     </NotFoundStyled>
   );
