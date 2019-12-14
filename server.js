@@ -1,3 +1,4 @@
+const compression = require('compression');
 const express = require('express');
 const next = require('next');
 const helmet = require('helmet');
@@ -11,6 +12,7 @@ const port = process.env.PORT || 3000;
 app.prepare().then(() => {
   const server = express();
   server.use(helmet());
+  server.use(compression());
 
   // Handling requests to SW
   server.get('/service-worker.js', (req, res) => {

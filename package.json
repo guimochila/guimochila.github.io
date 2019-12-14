@@ -8,7 +8,7 @@
     "dev": "next -p 7777",
     "watch:dev": "nodemon",
     "clean": "rimraf ./dist",
-    "start": "NODE_ENV=production next start"
+    "start": "NODE_ENV=production node ./server"
   },
   "repository": {
     "type": "git",
@@ -37,6 +37,7 @@
   "dependencies": {
     "@emotion/core": "^10.0.22",
     "@emotion/styled": "^10.0.23",
+    "compression": "^1.7.4",
     "express": "^4.17.1",
     "helmet": "^3.21.2",
     "next": "^9.1.4",
