@@ -6,8 +6,9 @@
   "scripts": {
     "build": "next build",
     "dev": "next -p 7777",
+    "watch:dev": "nodemon",
     "clean": "rimraf ./dist",
-    "start": "next start"
+    "start": "NODE_ENV=production next start"
   },
   "repository": {
     "type": "git",
@@ -29,15 +30,19 @@
   "devDependencies": {
     "@types/node": "^12.12.14",
     "@types/react": "^16.9.15",
+    "nodemon": "^2.0.1",
     "parcel-bundler": "^1.12.4",
     "typescript": "^3.7.3"
   },
   "dependencies": {
     "@emotion/core": "^10.0.22",
     "@emotion/styled": "^10.0.23",
+    "express": "^4.17.1",
+    "helmet": "^3.21.2",
     "next": "^9.1.4",
     "next-images": "^1.2.0",
     "next-offline": "^4.0.6",
+    "next-routes": "^1.4.2",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
     "react-router-dom": "^5.1.2",

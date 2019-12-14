@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from '@emotion/styled';
+import Head from 'next/head';
 
 const NotFoundStyled = styled.div`
   display: flex;
@@ -31,14 +32,19 @@ const NotFoundStyled = styled.div`
 
 const NotFound: React.FC = () => {
   return (
-    <NotFoundStyled>
-      <img
-        src="https://media.giphy.com/media/tvGOBZKNEX0ac/giphy.gif"
-        alt="Not found."
-      />
-      <h1>Oops! Page not found! 😱</h1>
-      <p>Please check if the URL is correct.</p>
-    </NotFoundStyled>
+    <>
+      <Head>
+        <title>Guilherme Scaldelai | 404 - Not found.</title>
+      </Head>
+      <NotFoundStyled>
+        <img
+          src="https://media.giphy.com/media/tvGOBZKNEX0ac/giphy.gif"
+          alt="Not found."
+        />
+        <h1>Oops! Page not found! 😱</h1>
+        <p>Please check if the URL is correct.</p>
+      </NotFoundStyled>
+    </>
   );
 };
 
