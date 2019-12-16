@@ -8,9 +8,10 @@ const dev = process.env.NODE_ENV !== 'production';
 const app = next({ dev });
 const handle = app.getRequestHandler();
 const port = process.env.PORT || 3000;
+const server = express();
+let expressServer = null;
 
 app.prepare().then(() => {
-  const server = express();
   server.use(helmet());
   server.use(compression());
 
@@ -24,5 +25,34 @@ app.prepare().then(() => {
     return handle(req, res);
   });
 
-  server.listen(port);
+  expressServer = server.listen(port);
 });
+
+// Handle SIGNTERMs
+process.on('SIGINT', function onSignint() {
+  console.warn(
+    `Got SIGINT (aka ctrl-c in docker). Graceful shutdown ${new Date().toISOString()}`,
+  );
+  shutdown();
+});
+process.on('SIGTERM', function onSigterm() {
+  console.warn(
+    `Got SIGTERM (docker container stop). Graceful shutdown ${new Date().toISOString()}`,
+  );
+  shutdown();
+});
+
+function shutdown() {
+  if (expressServer) {
+    expressServer.close(function onServerClosed(error) {
+      if (error) {
+        console.error(error);
+        process.exitCode = 1;
+      }
+
+      process.exit();
+    });
+  }
+
+  process.exit(1);
+}
