@@ -3,7 +3,7 @@ FROM node:12-alpine as base
 ENV PORT=3000
 EXPOSE 3000
 WORKDIR /app
-COPY package*.json ./
+COPY package.json ./
 RUN npm install && npm cache clean --force
 
 #Development image
@@ -18,8 +18,8 @@ CMD ["/app/node_modules/.bin/nodemon"]
 FROM dev as prod
 ENV NODE_ENV=production
 USER root
-RUN npm run build
 COPY --chown=node:node . .
+RUN npm run build
 USER node
 CMD ["node", "./server.js"]
 
