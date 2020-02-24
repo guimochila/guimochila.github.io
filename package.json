@@ -5,12 +5,13 @@
   "main": "index.js",
   "scripts": {
     "build:website": "next build",
-    "build": "yarn build:website && yarn copy:redirect",
+    "build": "yarn build:website && yarn export && yarn copy:redirect",
     "dev": "next -p 7777",
     "watch:dev": "nodemon",
     "clean": "rimraf ./.next",
     "start": "NODE_ENV=production node ./server",
-    "copy:redirect": "cp _redirects .next/"
+    "copy:redirect": "cp _redirects out/",
+    "export": "next export"
   },
   "repository": {
     "type": "git",
