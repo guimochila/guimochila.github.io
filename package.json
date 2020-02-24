@@ -4,11 +4,13 @@
   "description": "Personal Website",
   "main": "index.js",
   "scripts": {
-    "build": "next build",
+    "build:website": "next build",
+    "build": "yarn build:website && yarn copy:redirect",
     "dev": "next -p 7777",
     "watch:dev": "nodemon",
-    "clean": "rimraf ./dist",
-    "start": "NODE_ENV=production node ./server"
+    "clean": "rimraf ./.next",
+    "start": "NODE_ENV=production node ./server",
+    "copy:redirect": "cp _redirects .next/"
   },
   "repository": {
     "type": "git",
