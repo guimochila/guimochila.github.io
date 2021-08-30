@@ -3,11 +3,7 @@ import About from '../components/About';
 import Footer from '../components/Footer';
 import Header from '../components/Header';
 import Navbar from '../components/Navbar';
-import styled from '@emotion/styled';
-
-const Container = styled.div`
-  flex-grow: 1;
-`;
+import { Container } from '../layouts/Container/Container';
 
 const Main: React.FC = () => {
   return (

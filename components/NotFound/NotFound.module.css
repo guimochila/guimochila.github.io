@@ -1,0 +1,30 @@
+.notFound {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0 2rem;
+}
+
+.contentImage {
+  margin: 4rem;
+}
+
+.subText {
+  margin: 4rem 0;
+}
+
+@media (max-width: 30em) {
+  .notFound {
+    flex-wrap: wrap;
+  }
+
+  .text {
+    font-size: 2rem;
+  }
+
+  .contentImage {
+    width: 100%;
+    margin: 0 0 4rem 0;
+  }
+}

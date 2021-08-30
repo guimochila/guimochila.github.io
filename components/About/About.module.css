@@ -1,0 +1,18 @@
+.list {
+  display: flex;
+  padding: 0 4rem 2rem;
+  justify-content: flex-start;
+  max-width: 66rem;
+  flex-wrap: wrap;
+}
+
+.sectionContainer {
+  display: flex;
+  justify-content: center;
+}
+
+@media (max-width: 30em) {
+  .list {
+    padding: 0 2rem 2rem;
+  }
+}

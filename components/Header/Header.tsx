@@ -1,28 +1,18 @@
-import React from 'react';
-
-import {
-  Container,
-  Profile,
-  ProfileTitle,
-  ProfileSubtitle,
-  ProfileText,
-  ProfileAvatar,
-} from './Header.styles';
+import styles from './Header.module.css';
 import avatar from '../../public/static/img/avatar.jpeg';
 
 const Header: React.FC = () => (
-  <Container>
-    <Profile>
-      <ProfileAvatar src={avatar} alt="My avatar picture" />
-
-      <ProfileTitle>Guilherme Scaldelai</ProfileTitle>
-      <ProfileSubtitle>Software engineer @ Tiendeo</ProfileSubtitle>
-      <ProfileText>
-        In <i className="fas fa-heart profile__icon--heart" /> with
-        <i className="fab fa-js profile__icon--js" />
-      </ProfileText>
-    </Profile>
-  </Container>
+  <section className={styles.container}>
+    <header className={styles.header}>
+      <img className={styles.contentImg} src={avatar} alt="My avatar picture" />
+      <h1 className={styles.title}>Guilherme Scaldelai</h1>
+      <h2 className={styles.subtitle}>Fullstack engineer</h2>
+      <h3 className={styles.text}>
+        In <i className={`fas fa-heart ${styles.iconHeart}`} /> with
+        <i className={`fab fa-js ${styles.iconJs}`} />
+      </h3>
+    </header>
+  </section>
 );
 
 export default Header;

@@ -1,6 +1,0 @@
-{
-  "ignore": ["./next", "./node_modules"],
-  "watch": ["."],
-  "ext": "js",
-  "exec": "NODE_ENV=production node --inspect=0.0.0.0:9229 ./server"
-}
