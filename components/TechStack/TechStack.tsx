@@ -1,34 +1,28 @@
-import React from 'react';
-import { TechList, TechListItem } from './TechStack.styles';
-import {
-  ItemContainer,
-  ItemHeader,
-  ItemDetails,
-  ItemTitle,
-} from '../AboutItem/AboutItem.styles';
+import styles from './TechStack.module.css';
+import stylesAbout from '../AboutItem/AboutItem.module.css';
 
 import imgProject from '../../public/static/icons/project.svg';
 
 const TechStack: React.FC = () => {
   return (
-    <ItemContainer>
-      <ItemHeader>
+    <li className={stylesAbout.itemContainer}>
+      <div className={stylesAbout.itemHeader}>
         <img src={imgProject} alt="Technologies that I work with (icon)" />
-      </ItemHeader>
-      <ItemDetails>
-        <ItemTitle>Technologies</ItemTitle>
-        <TechList>
-          <TechListItem>HTML5 & CSS3</TechListItem>
-          <TechListItem>Javascript & ES6</TechListItem>
-          <TechListItem>React & Redux</TechListItem>
-          <TechListItem>Node.js</TechListItem>
-          <TechListItem>MongoDB</TechListItem>
-          <TechListItem>MySQL</TechListItem>
-          <TechListItem>GraphQL</TechListItem>
-          <TechListItem>Typescript</TechListItem>
-        </TechList>
-      </ItemDetails>
-    </ItemContainer>
+      </div>
+      <div className={stylesAbout.itemDetails}>
+        <h3 className={stylesAbout.itemTitle}>Technologies</h3>
+        <ul className={styles.list}>
+          <li className={styles.listItem}>HTML5 & CSS3</li>
+          <li className={styles.listItem}>Javascript & ES6</li>
+          <li className={styles.listItem}>React & Redux</li>
+          <li className={styles.listItem}>Node.js</li>
+          <li className={styles.listItem}>MongoDB</li>
+          <li className={styles.listItem}>MySQL</li>
+          <li className={styles.listItem}>GraphQL</li>
+          <li className={styles.listItem}>Typescript</li>
+        </ul>
+      </div>
+    </li>
   );
 };
 

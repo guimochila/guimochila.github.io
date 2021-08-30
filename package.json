@@ -3,15 +3,12 @@
   "version": "1.0.0",
   "description": "Personal Website",
   "main": "index.js",
+  "private": true,
   "scripts": {
-    "build:website": "next build",
-    "build": "yarn build:website && yarn export && yarn copy:redirect",
-    "dev": "next -p 7777",
-    "watch:dev": "nodemon",
+    "build": "next build",
+    "dev": "next dev -p 7777",
     "clean": "rimraf ./.next",
-    "start": "NODE_ENV=production node ./server",
-    "copy:redirect": "cp _redirects out/",
-    "export": "next export"
+    "start": "next start"
   },
   "repository": {
     "type": "git",
@@ -31,25 +28,18 @@
   },
   "homepage": "https://github.com/guimochila/guimochila.github.io#readme",
   "devDependencies": {
-    "@types/node": "^12.12.14",
-    "@types/react": "^16.9.15",
-    "nodemon": "^2.0.1",
-    "typescript": "^3.7.3"
+    "@types/react": "^17.0.19",
+    "typescript": "^4.4.2",
+    "typescript-plugin-css-modules": "^3.4.0"
   },
   "dependencies": {
-    "@emotion/core": "^10.0.22",
-    "@emotion/styled": "^10.0.23",
-    "compression": "^1.7.4",
-    "express": "^4.17.1",
-    "helmet": "^3.21.2",
-    "next": "^9.1.4",
-    "next-images": "^1.2.0",
-    "next-offline": "^4.0.6",
+    "next": "^11.1.0",
+    "next-images": "^1.8.1",
+    "next-offline": "^5.0.5",
     "next-routes": "^1.4.2",
-    "react": "^16.12.0",
-    "react-dom": "^16.12.0",
-    "react-router-dom": "^5.1.2",
-    "rimraf": "^2.7.1"
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "rimraf": "^3.0.2"
   },
   "browserslist": [
     "since 2017-06"

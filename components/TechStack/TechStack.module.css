@@ -1,0 +1,33 @@
+.list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  list-style: none;
+}
+
+.listItem {
+  flex: 0 0 50%;
+  margin-bottom: 0.7rem;
+}
+
+.listItem::before {
+  content: '';
+  display: inline-block;
+  height: 1rem;
+  width: 1rem;
+  margin-right: 0.7rem;
+  background-image: url('../../public/static/icons/chevron-thin-right.svg');
+  background-size: cover;
+}
+
+@supports ((-webkit-mask-image: url()) or (mask-image: url())) {
+  .listItem::before {
+    background-color: #f24976;
+    -webkit-mask-image: url('../../public/static/icons/chevron-thin-right.svg');
+    -webkit-mask-size: cover;
+    mask-image: url('../../public/static/icons/chevron-thin-right.svg');
+    mask-size: cover;
+    background-image: none;
+  }
+}

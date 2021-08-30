@@ -1,4 +1,4 @@
-# [guimochila.github.io](https://guimochila.github.io/)
+# [guimochila.github.io](https://guimochila.com/)
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/be06f854-478a-4911-bc46-ecdff4dfbace/deploy-status)](https://app.netlify.com/sites/modest-jackson-495673/deploys)
 
@@ -11,7 +11,4 @@ Personal website 🚀 🤓
 ## Tech stack:
 
 - React
-- React-Router
-- Javascript (Service Worker)
-- Parceljs
-- Emotion
+- Nextjs

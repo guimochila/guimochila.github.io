@@ -1,0 +1,41 @@
+.itemContainer {
+  display: flex;
+  list-style: none;
+  flex-grow: 1;
+}
+
+.itemHeader img {
+  height: 7rem;
+  width: 7rem;
+}
+
+.itemDetails {
+  padding: 0 2.5rem 4rem;
+  flex-grow: 1;
+}
+
+.itemTitle {
+  margin-bottom: 2rem;
+  color: #333;
+  font-weight: 400;
+}
+
+.itemDesc {
+  line-height: 1.7;
+  max-width: 50rem;
+}
+
+@media (max-width: 30em) {
+  .itemContainer {
+    flex-wrap: wrap;
+    display: flex;
+  }
+
+  .itemTitle {
+    text-align: center;
+  }
+
+  .itemHeader {
+    margin: 1rem auto;
+  }
+}
