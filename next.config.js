@@ -4,4 +4,5 @@ module.exports = withImages({
   images: {
     disableStaticImages: true,
   },
+  distDir: 'dist',
 });
