@@ -58,6 +58,12 @@
 .text {
   margin-top: 1.5rem;
   letter-spacing: 0.2rem;
+  display: flex;
+  align-items: center;
+}
+
+.text > * {
+  margin: 0 0.3rem;
 }
 
 @media (max-width: 30em) {
