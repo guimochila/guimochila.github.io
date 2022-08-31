@@ -19,6 +19,17 @@
   color: #666;
 }
 
+.blog {
+  background-color: #5badf0;
+  color: #fff;
+}
+
+.blog:hover,
+.blog:active {
+  background-color: #4487be;
+  color: #fff;
+}
+
 .link:last-child {
   position: relative;
   color: #fff;

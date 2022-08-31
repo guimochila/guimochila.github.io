@@ -2,6 +2,14 @@ import styles from './Navbar.module.css';
 
 const Navbar: React.FC = () => (
   <nav className={styles.navBar}>
+     <a
+      className={`${styles.link} ${styles.blog}`}
+      href="https://dev.to/guimochila"
+      target="_blank"
+      rel="noreferrer"
+    >
+      Blog
+    </a>
     <a
       className={styles.link}
       href="https://twitter.com/guiscaldelai"
