@@ -1,5 +1,9 @@
 import styles from './Container.module.css';
 
-export const Container: React.FC = ({ children }) => {
+type Props = {
+  children: React.ReactNode;
+};
+
+export const Container: React.FC<Props> = ({ children }) => {
   return <div className={styles.container}>{children}</div>;
 };
