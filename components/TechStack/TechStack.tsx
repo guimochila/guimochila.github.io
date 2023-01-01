@@ -1,13 +1,13 @@
+import Image from 'next/image';
 import styles from './TechStack.module.css';
 import stylesAbout from '../AboutItem/AboutItem.module.css';
-
 import imgProject from '../../public/static/icons/project.svg';
 
 const TechStack: React.FC = () => {
   return (
     <li className={stylesAbout.itemContainer}>
       <div className={stylesAbout.itemHeader}>
-        <img src={imgProject} alt="Technologies that I work with (icon)" />
+        <Image src={imgProject} alt="Technologies that I work with (icon)" />
       </div>
       <div className={stylesAbout.itemDetails}>
         <h3 className={stylesAbout.itemTitle}>Technologies</h3>

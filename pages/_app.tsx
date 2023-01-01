@@ -1,7 +1,7 @@
 import Head from 'next/head';
 import type { AppProps } from 'next/app';
-
 import '../layouts/styles.css';
+import Layout from '../layouts/Layout';
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
@@ -24,7 +24,9 @@ function MyApp({ Component, pageProps }: AppProps) {
         />
         <meta name="theme-color" content="#ffffff" />
       </Head>
-      <Component {...pageProps} />
+      <Layout>
+        <Component {...pageProps} />
+      </Layout>
     </>
   );
 }
