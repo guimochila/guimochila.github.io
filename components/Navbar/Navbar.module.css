@@ -20,6 +20,9 @@
 }
 
 .blog {
+  display: inline-block;
+  min-width: 7rem;
+  text-align: center;
   background-color: #5badf0;
   color: #fff;
 }
