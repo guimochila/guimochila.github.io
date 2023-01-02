@@ -1,4 +1,11 @@
 .sectionContainer {
     max-width: 60rem;
+    min-height: calc(100vh - 52.3rem);
     margin: 0 auto;
+    line-height: 1.7;
+}
+
+article.sectionContainer li {
+    list-style-type: circle;
+    list-style-position: inside;
 }

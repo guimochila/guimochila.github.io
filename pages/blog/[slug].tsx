@@ -1,17 +1,19 @@
 import { MDXRemote } from 'next-mdx-remote';
 import { getArticleFromSlug, getSlugs } from '../../utils/articles';
+import styles from '../../styles/shared.module.css';
 
 export default function Article({ article }) {
   if (!article) {
-    return <section></section>;
+    return;
   }
+
   return (
-    <section>
+    <article className={styles.sectionContainer}>
       <MDXRemote
         compiledSource={article.source}
         frontmatter={article.frontmatter}
       />
-    </section>
+    </article>
   );
 }
 

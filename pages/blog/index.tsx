@@ -8,10 +8,7 @@ export default function Blog({ articles }: { articles: TPost[] }) {
     return <section></section>;
   }
   return (
-    <section
-      style={{ minHeight: 'calc(100vh - 52.3rem)' }}
-      className={styles.sectionContainer}
-    >
+    <section className={styles.sectionContainer}>
       <PostList posts={articles} />
     </section>
   );
