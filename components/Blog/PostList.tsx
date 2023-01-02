@@ -3,11 +3,13 @@ import { TPost } from './Post';
 import styles from './PostList.module.css';
 
 const transformDate = (date: string) =>
-  new Date(date).toLocaleString('default', {
-    month: 'short',
-    day: '2-digit',
-    year: 'numeric',
-  });
+  new Date(date)
+    .toLocaleString('en-us', {
+      month: 'short',
+      day: '2-digit',
+      year: 'numeric',
+    })
+    .replace(',', '');
 
 const PostList = ({ posts }: { posts: TPost[] }) => {
   return (
