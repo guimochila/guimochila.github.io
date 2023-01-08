@@ -10,6 +10,7 @@ const Header: React.FC = () => (
         className={styles.contentImg}
         src={avatar}
         alt="My avatar picture"
+        priority
       />
       <h1 className={styles.title}>Guilherme Scaldelai</h1>
       <h2 className={styles.subtitle}>Software Engineer @TomTom</h2>
