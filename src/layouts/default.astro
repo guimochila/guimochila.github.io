@@ -1,0 +1,183 @@
+---
+interface NavItems {
+	path: string
+	label: string
+}
+
+const navItems: NavItems[] = [
+	{
+		path: 'https://dev.to/guimochila',
+		label: 'Blog',
+	},
+	{
+		path: 'https://twitter.com/guiscaldelai',
+		label: 'Twitter',
+	},
+	{
+		path: 'https://www.linkedin.com/in/guilhermescaldelai/',
+		label: 'LinkedIn',
+	},
+	{
+		path: 'https://github.com/guimochila',
+		label: 'GitHub',
+	},
+]
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="description" content="Astro description" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/x-icon" href="/favicon.ico" />
+		<meta name="generator" content={Astro.generator} />
+		<meta
+			name="description"
+			content="I'm passionate about computers. I started as Sysadmin, Security and now I finally found my path in this world which is programming. I enjoy creating and fixing applications in Javascript whether is frontend or backend. I love to work in a fast pace environment. A versatile engineer with interests in Software Engineering. Adaptable and self motivated learner. Interested in new programming technologies, and continuous self improvement."
+		/>
+		<link
+			rel="stylesheet"
+			href="https://use.fontawesome.com/releases/v5.3.1/css/all.css"
+			integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU"
+			crossorigin="anonymous"
+		/>
+		<link
+			rel="stylesheet"
+			href="https://fonts.googleapis.com/css?family=Lato:300,400,900"
+		/>
+		<title>Guilherme Scaldelai</title>
+	</head>
+	<body>
+		<header>
+			<nav class="navbar">
+				{
+					navItems.map((item) => (
+						<a href={item.path} target="_blank" rel="noreferrer" class="link">
+							{item.label}
+						</a>
+					))
+				}
+			</nav>
+		</header>
+		<slot />
+	</body>
+</html>
+<style is:global>
+	:root {
+		--color-black: #000;
+		--color-gray: #aaa;
+		--color-gray-dark: #666;
+		--color-blue-light: #5badf0;
+		--color-pink-dark: #f24976;
+	}
+
+	* {
+		box-sizing: border-box;
+		margin: 0;
+		padding: 0;
+	}
+
+	html {
+		font-size: 62.5%;
+	}
+
+	html,
+	body {
+		min-height: 100vh;
+	}
+
+	body {
+		color: var(--color-gray-dark);
+		font-size: 1.6rem;
+		font-family: 'Lato', Helvetica, sans-serif;
+		font-weight: 300;
+		line-height: 1;
+	}
+
+	a {
+		color: var(--color-blue-light);
+		transition: color 300ms;
+		font-weight: 400;
+		text-decoration: none;
+	}
+	@media (max-width: 30em) {
+		a {
+			margin-bottom: 2rem;
+		}
+	}
+	a:hover,
+	a:active {
+		color: var(--color-pink-dark);
+	}
+
+	h2,
+	h3 {
+		color: var(--color-gray);
+		font-weight: 300;
+		font-size: 2.08rem;
+	}
+</style>
+
+<style>
+	.navbar {
+		display: flex;
+		justify-content: flex-end;
+		padding: 2rem 2rem 0;
+	}
+	@media (max-width: 30em) {
+		.navbar {
+			flex-wrap: wrap;
+			justify-content: center;
+		}
+	}
+
+	.link {
+		padding: 0.8rem 1.2rem;
+	}
+
+	.link:hover,
+	.link:active {
+		color: #666;
+	}
+
+	.link:first-child {
+		display: inline-block;
+		min-width: 7rem;
+		text-align: center;
+		background-color: #5badf0;
+		color: #fff;
+	}
+
+	.link:first-child:hover,
+	.link:first-child:active {
+		background-color: #4487be;
+		color: #fff;
+	}
+
+	.link:last-child {
+		position: relative;
+		color: #fff;
+		transition: all 0.3s ease;
+	}
+
+	.link:last-child:after {
+		content: '';
+		background-color: #e8c81f;
+		position: absolute;
+		display: block;
+		width: 100%;
+		height: 30px;
+		left: 0;
+		top: 0;
+		z-index: -1;
+		-webkit-transform: rotate(3deg);
+		transform: rotate(3deg);
+		transition: all 0.2s ease;
+	}
+
+	.link:hover:after {
+		-webkit-transform: rotate(0) scale(1.2);
+		transform: rotate(0) scale(1.2);
+	}
+</style>

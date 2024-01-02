@@ -1,0 +1,32 @@
+{
+	"name": "guimochila.github.io",
+	"type": "module",
+	"version": "0.0.1",
+	"description": "Personal Website",
+	"private": true,
+	"author": "Guilherme Scaldelai<gui.mochila@gmail.com>",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/guimochila/guimochila.github.io/issues"
+	},
+	"homepage": "https://github.com/guimochila/guimochila.github.io#readme",
+	"keywords": [
+		"Personal",
+		"Website",
+		"CSS",
+		"HTML",
+		"Javascript"
+	],
+	"scripts": {
+		"dev": "astro dev",
+		"start": "astro dev",
+		"build": "astro check && astro build",
+		"preview": "astro preview",
+		"astro": "astro"
+	},
+	"dependencies": {
+		"@astrojs/check": "^0.3.4",
+		"astro": "^4.0.8",
+		"typescript": "^5.3.3"
+	}
+}
