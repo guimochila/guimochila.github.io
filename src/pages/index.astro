@@ -41,4 +41,41 @@ const details: Item[] = [
 
 <Layout>
 	<Header />
+
+  <section class="container">
+    <ol class="list">
+      {details.map(item => (
+        <li class={itemContainer}>
+      <div class={itemHeader}>
+        <Image src={image} alt={title} width={70} height={70} />
+      </div>
+      <div class={itemDetails}>
+        <h3 class={itemTitle}>{title}</h3>
+        <p class={itemDesc}>{description}</p>
+      </div>
+    </li>
+      ))}
+    </ol>
+  </section>
 </Layout>
+
+<style>
+.list {
+  display: flex;
+  padding: 0 4rem 2rem;
+  justify-content: flex-start;
+  max-width: 66rem;
+  flex-wrap: wrap;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+}
+
+@media (max-width: 30em) {
+  .list {
+    padding: 0 2rem 2rem;
+  }
+}
+</style>
