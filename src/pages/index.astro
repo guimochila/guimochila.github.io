@@ -11,7 +11,7 @@ interface Item {
 const details: Item[] = [
 	{
 		title: 'Software Engineer',
-		image: 'static/icons/javascript.svg',
+		image: 'images/javascript.svg',
 		description: `Besides studying Sysadmin and Malware Analysis, I have always loved
     to create new tools to automate tasks. I can't deny that in the past
     year (2017) I have gotten more into software engineering. So I
@@ -21,7 +21,7 @@ const details: Item[] = [
 	},
 	{
 		title: 'Security Analyst',
-		image: 'static/icons/security.svg',
+		image: 'images/security.svg',
 		description: `I am driven by new challenges in my life and career. Thus I decided
     to jump into security, something that called my atention since I
     started studying computers. I dove into Malware Analysis for a year
@@ -30,52 +30,162 @@ const details: Item[] = [
 	},
 	{
 		title: 'System Administrator',
-		image: 'static/icons/sysadmin.svg',
+		image: 'images/sysadmin.svg',
 		description: `Since I started with computers, I have always liked Linux and from
   there I started studying System Administration based on Linux and
   FreeBSD plataforms. I have worked for many years as Sysadmin and
   support on Linux based servers.`,
 	},
 ]
+
+const techStack = [
+	'HTML5 & CSS3',
+	'Javascript & ES6',
+	'React & Redux',
+  'Nextjs',
+  'Astro',
+	'Node.js',
+	'MongoDB',
+	'MySQL',
+	'Postgres',
+	'Docker',
+	'GraphQL',
+	'Typescript',
+	'Rust',
+]
 ---
 
 <Layout>
 	<Header />
 
-  <section class="container">
-    <ol class="list">
-      {details.map(item => (
-        <li class={itemContainer}>
-      <div class={itemHeader}>
-        <Image src={image} alt={title} width={70} height={70} />
-      </div>
-      <div class={itemDetails}>
-        <h3 class={itemTitle}>{title}</h3>
-        <p class={itemDesc}>{description}</p>
-      </div>
-    </li>
-      ))}
-    </ol>
-  </section>
+	<section class="container">
+		<ol class="list">
+			{
+				details.map((item) => (
+					<li class="item-container">
+						<div class="item-header">
+							<img src={item.image} alt={item.title} width={70} height={70} />
+						</div>
+						<div class="item-details">
+							<h3 class="item-title">{item.title}</h3>
+							<p class="item-desc">{item.description}</p>
+						</div>
+					</li>
+				))
+			}
+
+			<li class="item-container">
+				<div class="item-header">
+					<img
+						src="images/project.svg"
+						alt="Technologies that I work with (icon)"
+					/>
+				</div>
+				<div class="item-details">
+					<h3 class="item-title">Technologies</h3>
+					<ul class="tech-list">
+						{techStack.map((tech) => <li class="list-item">{tech}</li>)}
+					</ul>
+				</div>
+			</li>
+		</ol>
+	</section>
 </Layout>
 
 <style>
-.list {
-  display: flex;
-  padding: 0 4rem 2rem;
-  justify-content: flex-start;
-  max-width: 66rem;
-  flex-wrap: wrap;
-}
+	.list {
+		display: flex;
+		padding: 0 4rem 2rem;
+		justify-content: flex-start;
+		max-width: 66rem;
+		flex-wrap: wrap;
+	}
 
-.container {
-  display: flex;
-  justify-content: center;
-}
+	.container {
+		display: flex;
+		justify-content: center;
+	}
 
-@media (max-width: 30em) {
-  .list {
-    padding: 0 2rem 2rem;
-  }
-}
+	.item-container {
+		display: flex;
+		list-style: none;
+		flex-grow: 1;
+	}
+
+	.item-header img {
+		height: 7rem;
+		width: 7rem;
+	}
+
+	.item-details {
+		padding: 0 2.5rem 4rem;
+		flex-grow: 1;
+	}
+
+	.item-title {
+		margin-bottom: 2rem;
+		color: #333;
+		font-weight: 400;
+	}
+
+	.item-desc {
+		font-size: 1.8rem;
+		line-height: 1.7;
+		max-width: 50rem;
+	}
+
+	.tech-list {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		align-items: center;
+		list-style: none;
+	}
+
+	.list-item {
+		flex: 0 0 50%;
+		margin-bottom: 0.7rem;
+	}
+
+	.list-item::before {
+		content: '';
+		display: inline-block;
+		height: 1rem;
+		width: 1rem;
+		margin-right: 0.7rem;
+		background-image: url('images/chevron-thin-right.svg');
+		background-size: cover;
+	}
+
+	@supports ((-webkit-mask-image: url()) or (mask-image: url())) {
+		.list-item::before {
+			background-color: var(--color-pink-dark);
+			-webkit-mask-image: url('images/chevron-thin-right.svg');
+			-webkit-mask-size: cover;
+			mask-image: url('images/chevron-thin-right.svg');
+			mask-size: cover;
+			background-image: none;
+		}
+	}
+
+	@media (max-width: 30em) {
+		.item-container {
+			flex-wrap: wrap;
+			display: flex;
+		}
+
+		.item-title {
+			text-align: center;
+		}
+
+		.item-header {
+			margin: 1rem auto;
+		}
+	}
+
+	@media (max-width: 30em) {
+		.list {
+			padding: 0 2rem 2rem;
+		}
+	}
 </style>

@@ -40,7 +40,9 @@ const navItems: NavItems[] = [
 			rel="stylesheet"
 			href="https://fonts.googleapis.com/css?family=Lato:300,400,900"
 		/>
-    <script src="https://kit.fontawesome.com/102682c552.js" crossorigin="anonymous"></script>
+		<script
+			src="https://kit.fontawesome.com/102682c552.js"
+			crossorigin="anonymous"></script>
 		<title>Guilherme Scaldelai</title>
 	</head>
 	<body>
@@ -54,8 +56,16 @@ const navItems: NavItems[] = [
 					))
 				}
 			</nav>
- 		</header>
+		</header>
 		<slot />
+		<footer class="footer">
+			<div class="wrapper">
+				<p class="text">
+					&copy; Copyright {new Date().getFullYear()} - Guilherme Scaldelai
+				</p>
+				<br />
+			</div>
+		</footer>
 	</body>
 </html>
 <style is:global>
@@ -174,5 +184,38 @@ const navItems: NavItems[] = [
 	.link:hover:after {
 		-webkit-transform: rotate(0) scale(1.2);
 		transform: rotate(0) scale(1.2);
+	}
+
+	.footer {
+		display: flex;
+		justify-content: center;
+		flex-direction: column;
+		flex-shrink: 0;
+	}
+
+	@media (max-width: 30em) {
+		.text {
+			font-size: 1.28rem;
+		}
+	}
+	@media (max-width: 23.43em) {
+		.footer * {
+			font-size: 0.96rem;
+		}
+	}
+
+	.footer .wrapper {
+		display: flex;
+		justify-content: center;
+		width: 50rem;
+		border-top: 1px solid #eee;
+		padding: 4rem 4rem;
+		align-self: center;
+	}
+
+	@media (max-width: 30em) {
+		.wrapper {
+			width: 80%;
+		}
 	}
 </style>

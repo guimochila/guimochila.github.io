@@ -1,0 +1,52 @@
+---
+import Layout from '../layouts/page.astro'
+import Header from '../components/Header.astro'
+---
+
+<Layout>
+  <Header />
+	<div class="not-found">
+		<img
+			class="content-image"
+			src="https://media.giphy.com/media/tvGOBZKNEX0ac/giphy.gif"
+			alt="Not found."
+			width={480}
+			height={204}
+		/>
+		<h1 class="text">Oops! Page not found! 😱</h1>
+		<p class="sub-text">Please check if the URL is correct.</p>
+	</div>
+</Layout>
+
+<style>
+	.not-found {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		margin: 0 2rem;
+	}
+
+	.content-image {
+		margin: 4rem;
+	}
+
+	.sub-text {
+		margin: 4rem 0;
+	}
+
+	@media (max-width: 30em) {
+		.not-found {
+			flex-wrap: wrap;
+		}
+
+		.text {
+			font-size: 2rem;
+		}
+
+		.content-image {
+			width: 100%;
+			margin: 0 0 4rem 0;
+		}
+	}
+</style>
